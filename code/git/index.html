@@ -1,347 +1,58 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
 <head>
-    <title>Git &middot; peng</title>
-    <meta name="generator" content="Hugo 0.57.0" />
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="author" content="peng">
-    
-      <meta name="description" content="">
-    
-    
-    <link rel="canonical" href="http://bsydl.github.io/code/git/"/>
-    <link rel="icon" href="http://bsydl.github.io/favicon.ico">
-    <link rel="apple-touch-icon" href="http://bsydl.github.io/apple-touch-icon.png"/>
-    <link rel="stylesheet" href="http://bsydl.github.io/css/style.css">
-    <link rel="stylesheet" href="http://bsydl.github.io/css/font-awesome.min.css">
-    <link rel="stylesheet" href="http://bsydl.github.io/css/monokai.css">
-    <link rel="stylesheet" href="http://bsydl.github.io/fancybox/jquery.fancybox.css">
-    
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
-    <meta property="og:title" content="Git" />
-<meta property="og:description" content="Git 0、学习Git的原因  更好的管理代码： GitHub作为免费的分布式版本控制系统；每一次上传都会记录版本，有助于程序员恢复以前版本 更深一步的学习： GItHub上有很多优秀的开源项目值得我们学习 面试要求： 简历中经常需要附带个人GitHub地址，供面试官查看个人项目
-1、git简介 github是linus继linnux之后第二大发明，秉着开源精神，和linux一样，Git同样免费。
-Git是目前世界上最先进的分布式版本控制系统（没有之一）；
-Linus人物传   很多人都知道，Linus在1991年创建了开源的Linux，从此，Linux系统不断发展，已经成为最大的服务器系统软件了。
-Linus虽然创建了Linux，但Linux的壮大是靠全世界热心的志愿者参与的，这么多人在世界各地为Linux编写代码，那Linux的代码是如何管理的呢？
-事实是，在2002年以前，世界各地的志愿者把源代码文件通过diff的方式发给Linus，然后由Linus本人通过手工方式合并代码！
-你也许会想，为什么Linus不把Linux代码放到版本控制系统里呢？不是有CVS、SVN这些免费的版本控制系统吗？因为Linus坚定地反对CVS和SVN，这些集中式的版本控制系统不但速度慢，而且必须联网才能使用。有一些商用的版本控制系统，虽然比CVS、SVN好用，但那是付费的，和Linux的开源精神不符。
-不过，到了2002年，Linux系统已经发展了十年了，代码库之大让Linus很难继续通过手工方式管理了，社区的弟兄们也对这种方式表达了强烈不满，于是Linus选择了一个商业的版本控制系统BitKeeper，BitKeeper的东家BitMover公司出于人道主义精神，授权Linux社区免费使用这个版本控制系统。
-安定团结的大好局面在2005年就被打破了，原因是Linux社区牛人聚集，不免沾染了一些梁山好汉的江湖习气。开发Samba的Andrew试图破解BitKeeper的协议（这么干的其实也不只他一个），被BitMover公司发现了（监控工作做得不错！），于是BitMover公司怒了，要收回Linux社区的免费使用权。
-Linus可以向BitMover公司道个歉，保证以后严格管教弟兄们，嗯，这是不可能的。实际情况是这样的：
-Linus花了两周时间自己用C写了一个分布式版本控制系统，这就是Git！一个月之内，Linux系统的源码已经由Git管理了！牛是怎么定义的呢？大家可以体会一下。
-Git迅速成为最流行的分布式版本控制系统，尤其是2008年，GitHub网站上线了，它为开源项目免费提供Git存储，无数开源项目开始迁移至GitHub，包括jQuery，PHP，Ruby等等。
-历史就是这么偶然，如果不是当年BitMover公司威胁Linux社区，可能现在我们就没有免费而超级好用的Git了
-   2、github安装 Windows下的安装 直接在官网上去下载。下载完成后，随便在某个文件下右键如果有Git Bash Here就安装成功。安装后，还要在命令行输入如下命令
-修改自己的用户名和邮箱地址：
-$ git config &ndash;global user.name &ldquo;xxx&rdquo;
-$ git config &ndash;global user.email &ldquo;xxx&rdquo;
-查看自己的用户名和邮箱地址：
-$ git config user.name
-$ git config user.email
-mac下的安装 首先查看电脑是否安装Git，终端输入：git; 如果没有安装，则通过homebrew安装Git、 - 1、未安装homebrew，需安装homebrew 终端输入命令
-/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;   2、安装git" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="http://bsydl.github.io/code/git/" />
-<meta property="article:published_time" content="2019-11-07T00:17:33+08:00" />
-<meta property="article:modified_time" content="2019-11-07T00:17:33+08:00" />
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.57.0" />
 
-    
-    <meta itemprop="name" content="Git">
-<meta itemprop="description" content="Git 0、学习Git的原因  更好的管理代码： GitHub作为免费的分布式版本控制系统；每一次上传都会记录版本，有助于程序员恢复以前版本 更深一步的学习： GItHub上有很多优秀的开源项目值得我们学习 面试要求： 简历中经常需要附带个人GitHub地址，供面试官查看个人项目
-1、git简介 github是linus继linnux之后第二大发明，秉着开源精神，和linux一样，Git同样免费。
-Git是目前世界上最先进的分布式版本控制系统（没有之一）；
-Linus人物传   很多人都知道，Linus在1991年创建了开源的Linux，从此，Linux系统不断发展，已经成为最大的服务器系统软件了。
-Linus虽然创建了Linux，但Linux的壮大是靠全世界热心的志愿者参与的，这么多人在世界各地为Linux编写代码，那Linux的代码是如何管理的呢？
-事实是，在2002年以前，世界各地的志愿者把源代码文件通过diff的方式发给Linus，然后由Linus本人通过手工方式合并代码！
-你也许会想，为什么Linus不把Linux代码放到版本控制系统里呢？不是有CVS、SVN这些免费的版本控制系统吗？因为Linus坚定地反对CVS和SVN，这些集中式的版本控制系统不但速度慢，而且必须联网才能使用。有一些商用的版本控制系统，虽然比CVS、SVN好用，但那是付费的，和Linux的开源精神不符。
-不过，到了2002年，Linux系统已经发展了十年了，代码库之大让Linus很难继续通过手工方式管理了，社区的弟兄们也对这种方式表达了强烈不满，于是Linus选择了一个商业的版本控制系统BitKeeper，BitKeeper的东家BitMover公司出于人道主义精神，授权Linux社区免费使用这个版本控制系统。
-安定团结的大好局面在2005年就被打破了，原因是Linux社区牛人聚集，不免沾染了一些梁山好汉的江湖习气。开发Samba的Andrew试图破解BitKeeper的协议（这么干的其实也不只他一个），被BitMover公司发现了（监控工作做得不错！），于是BitMover公司怒了，要收回Linux社区的免费使用权。
-Linus可以向BitMover公司道个歉，保证以后严格管教弟兄们，嗯，这是不可能的。实际情况是这样的：
-Linus花了两周时间自己用C写了一个分布式版本控制系统，这就是Git！一个月之内，Linux系统的源码已经由Git管理了！牛是怎么定义的呢？大家可以体会一下。
-Git迅速成为最流行的分布式版本控制系统，尤其是2008年，GitHub网站上线了，它为开源项目免费提供Git存储，无数开源项目开始迁移至GitHub，包括jQuery，PHP，Ruby等等。
-历史就是这么偶然，如果不是当年BitMover公司威胁Linux社区，可能现在我们就没有免费而超级好用的Git了
-   2、github安装 Windows下的安装 直接在官网上去下载。下载完成后，随便在某个文件下右键如果有Git Bash Here就安装成功。安装后，还要在命令行输入如下命令
-修改自己的用户名和邮箱地址：
-$ git config &ndash;global user.name &ldquo;xxx&rdquo;
-$ git config &ndash;global user.email &ldquo;xxx&rdquo;
-查看自己的用户名和邮箱地址：
-$ git config user.name
-$ git config user.email
-mac下的安装 首先查看电脑是否安装Git，终端输入：git; 如果没有安装，则通过homebrew安装Git、 - 1、未安装homebrew，需安装homebrew 终端输入命令
-/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;   2、安装git">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Git &middot; peng</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="http://bsydl.github.io/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="http://bsydl.github.io/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="http://bsydl.github.io/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="http://bsydl.github.io/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
 
 
-<meta itemprop="datePublished" content="2019-11-07T00:17:33&#43;08:00" />
-<meta itemprop="dateModified" content="2019-11-07T00:17:33&#43;08:00" />
-<meta itemprop="wordCount" content="89">
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
 
-
-
-<meta itemprop="keywords" content="" />
-
-    <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Git"/>
-<meta name="twitter:description" content="Git 0、学习Git的原因  更好的管理代码： GitHub作为免费的分布式版本控制系统；每一次上传都会记录版本，有助于程序员恢复以前版本 更深一步的学习： GItHub上有很多优秀的开源项目值得我们学习 面试要求： 简历中经常需要附带个人GitHub地址，供面试官查看个人项目
-1、git简介 github是linus继linnux之后第二大发明，秉着开源精神，和linux一样，Git同样免费。
-Git是目前世界上最先进的分布式版本控制系统（没有之一）；
-Linus人物传   很多人都知道，Linus在1991年创建了开源的Linux，从此，Linux系统不断发展，已经成为最大的服务器系统软件了。
-Linus虽然创建了Linux，但Linux的壮大是靠全世界热心的志愿者参与的，这么多人在世界各地为Linux编写代码，那Linux的代码是如何管理的呢？
-事实是，在2002年以前，世界各地的志愿者把源代码文件通过diff的方式发给Linus，然后由Linus本人通过手工方式合并代码！
-你也许会想，为什么Linus不把Linux代码放到版本控制系统里呢？不是有CVS、SVN这些免费的版本控制系统吗？因为Linus坚定地反对CVS和SVN，这些集中式的版本控制系统不但速度慢，而且必须联网才能使用。有一些商用的版本控制系统，虽然比CVS、SVN好用，但那是付费的，和Linux的开源精神不符。
-不过，到了2002年，Linux系统已经发展了十年了，代码库之大让Linus很难继续通过手工方式管理了，社区的弟兄们也对这种方式表达了强烈不满，于是Linus选择了一个商业的版本控制系统BitKeeper，BitKeeper的东家BitMover公司出于人道主义精神，授权Linux社区免费使用这个版本控制系统。
-安定团结的大好局面在2005年就被打破了，原因是Linux社区牛人聚集，不免沾染了一些梁山好汉的江湖习气。开发Samba的Andrew试图破解BitKeeper的协议（这么干的其实也不只他一个），被BitMover公司发现了（监控工作做得不错！），于是BitMover公司怒了，要收回Linux社区的免费使用权。
-Linus可以向BitMover公司道个歉，保证以后严格管教弟兄们，嗯，这是不可能的。实际情况是这样的：
-Linus花了两周时间自己用C写了一个分布式版本控制系统，这就是Git！一个月之内，Linux系统的源码已经由Git管理了！牛是怎么定义的呢？大家可以体会一下。
-Git迅速成为最流行的分布式版本控制系统，尤其是2008年，GitHub网站上线了，它为开源项目免费提供Git存储，无数开源项目开始迁移至GitHub，包括jQuery，PHP，Ruby等等。
-历史就是这么偶然，如果不是当年BitMover公司威胁Linux社区，可能现在我们就没有免费而超级好用的Git了
-   2、github安装 Windows下的安装 直接在官网上去下载。下载完成后，随便在某个文件下右键如果有Git Bash Here就安装成功。安装后，还要在命令行输入如下命令
-修改自己的用户名和邮箱地址：
-$ git config &ndash;global user.name &ldquo;xxx&rdquo;
-$ git config &ndash;global user.email &ldquo;xxx&rdquo;
-查看自己的用户名和邮箱地址：
-$ git config user.name
-$ git config user.email
-mac下的安装 首先查看电脑是否安装Git，终端输入：git; 如果没有安装，则通过homebrew安装Git、 - 1、未安装homebrew，需安装homebrew 终端输入命令
-/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;   2、安装git"/>
-<meta name="twitter:site" content="@spf13"/>
-
-    
-
-    
-
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  
+  
 </head>
-<body>
-<div class="container">
 
-
-<div id="container">
-	<header id="header">
-  <div id="header-main" class="header-inner">
-    <div class="outer">
-      <a href="http://bsydl.github.io/" id="logo">
-          
-          <i class="logo" style="background-image: url('http://bsydl.github.io/css/images/logo.png')"></i>
-          
-          <span class="site-title">peng</span>
-      </a>
-      <nav id="main-nav">
-          
-          
-          <a class="main-nav-link" href="http://bsydl.github.io/">Home</a>
-          
-          
-          
-          
-          
-          
-
-          
-
-          
-          
-          
-          
-          <a class="main-nav-link" href="http://bsydl.github.io/tags/">Tags</a>
-          
-          
-          
-          <a class="main-nav-link" href="http://bsydl.github.io/categories/">Categories</a>
-          
-          
-      </nav>
-        <nav id="sub-nav">
-          <div class="profile" id="profile-nav">
-            <a id="profile-anchor" href="javascript:;"><img class="avatar" src="http://bsydl.github.io/css/images/avatar.png"><i class="fa fa-caret-down"></i></a>
-          </div>
-        </nav>
-        <div id="search-form-wrap">
-          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
-              <input type="search" name="q" class="search-form-input" placeholder="Search">
-              <button type="submit" class="search-form-submit">
-              </button>
-              <input type="hidden" name="sitesearch" value="http://bsydl.github.io/" />
-         </form>
-        </div>
+  <body class=" ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="http://bsydl.github.io/"><h1>peng</h1></a>
+      <p class="lead">
+      An elegant open source and mobile first theme for <a href="http://hugo.spf13.com">hugo</a> made by <a href="http://twitter.com/mdo">@mdo</a>. Originally made for Jekyll.
+      </p>
     </div>
-  </div>
-  <div id="main-nav-mobile" class="header-sub header-inner">
-    <table class="menu outer">
-      <tbody>
-          <tr>
-          
-          
-          <td><a class="main-nav-link" href="http://bsydl.github.io/">Home</a></td>
-          
-          
-          
-          
-          
-          
 
-          
-
-          
-          
-          
-          
-          <td><a class="main-nav-link" href="http://bsydl.github.io/tags/">Tags</a></td>
-          
-          
-          
-          <td><a class="main-nav-link" href="http://bsydl.github.io/categories/">Categories</a></td>
-          
-          
-          <td>
-          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
-          <input type="search" name="q" class="search-form-input" placeholder="Search">
-          <input type="hidden" name="sitesearch" value="http://bsydl.github.io/" />
-          </form>
-        </td>
-      </tr>
-      </tbody>
-    </table>
-  </div>
-</header>
-
-   	
-   	<div class="outer">
-   	
-    	<aside id="profile">
-  <div class="inner profile-inner">
-    <div class="base-info profile-block">
-      
-      <img id="avatar" src="https://www.gravatar.com/avatar/4fca794da0cf08804f99048d3c8b39c1?s=100&d=identicon"/>
-      
-      <h2 id="name">peng</h2>
-      <h3 id="title">Blogger - Programmer - Gopher</h3>
-      <span id="location"><i class="fa fa-map-marker"></i>guangzhou</span>
-      
-          <a id="follow" href="https://github.com/digitalcraftsman">
-              Follow
-          </a>
-      
-    </div>
-    <div class="article-info profile-block">
-      <div class="article-info-block">
-        0
-        <span>Posts</span>
-      </div>
-      <div class="article-info-block">
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="http://bsydl.github.io/">Home</a> </li>
         
-          0
-        
-        <span>
-            Tags
-        </span>
-      </div>
-    </div>
-    <div class="profile-block social-links">
-      <table>
-        <tr>
-          
-<td><a href="//github.com/digitalcraftsman" target="_blank" title="GitHub"><i class="fa fa-github"></i></a></td>
+      </ul>
+    </nav>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<td><a href="//twitter.com/spf13" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></td>
-
-
-          <td><a href="http://bsydl.github.io/index.xml" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></td>
-        </tr>
-      </table>
-    </div>
+    <p>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</p>
   </div>
 </aside>
 
-    
-
-    <section id="main">
-    
-    <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
-    <div class="article-inner">
-        
-
-        <header class="article-header">
-    <a href="http://bsydl.github.io/code/git/">
-    <h1 class="article-title" itemprop="name">
-        Git
-    </h1>
-    </a>
-    <div class="article-meta">
-
-        
-        <div class="article-date">
-            <i class="fa fa-calendar"></i>
-            <time datetime="2019-11-07 00:17:33 &#43;0800 CST" itemprop="datePublished">2019-11-07</time>
-            &middot;
-            89
-            words
-            &middot;
-            1
-            minute read
-        </div>
-        
-        
-
-        
-    </div>
-</header>
-
-        <div class="article-entry" itemprop="articleBody">
-            
+    <main class="content container">
+    <div class="post">
+  <h1>Git</h1>
+  <time datetime=2019-11-07T00:17:33&#43;0800 class="post-date">Thu, Nov 7, 2019</time>
+  
 
 <h1 id="git">Git</h1>
 
@@ -416,94 +127,10 @@ Git迅速成为最流行的分布式版本控制系统，尤其是2008年，GitH
 
 <p>对于程序员来说，第一入门肯定得是HolleWorld（滑稽）</p>
 
-        </div>
-        <footer class="article-footer">
-    <a data-url="http://bsydl.github.io/code/git/" data-id="c272867d2e0b64de3737b9a35998318a" class="article-share-link">
-        <i class="fa fa-share"></i>
-        Share
-    </a>
-    
-    <a href="http://bsydl.github.io/code/git/#disqus_thread" class="article-comment-link">
-        Comments
-    </a>
-    
+</div>
 
-    <script>
-    (function ($) {
-        
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-    </script>
-</footer>
-
-    </div>
-
-    
-
-</article>
-
-
-<section id="comments">
-    <div id="disqus_thread">
-        <div id="disqus_thread"></div>
+<h2>Comments</h2>
+<div id="disqus_thread"></div>
 <script type="application/javascript">
     var disqus_config = function () {
     
@@ -523,81 +150,8 @@ Git迅速成为最流行的分布式版本控制系统，尤其是2008年，GitH
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-    </div>
-</section>
-
-
-    </section>
-
-   	
-    	<aside id="sidebar">
-    
-<div class="widget-wrap">
-    <h3 class="widget-title">
-        Recents
-    </h3>
-    <div class="widget">
-        <ul id="recent-post">
-            
-        </ul>
-    </div>
-</div>
-
+    </main>
 
     
-
-
-
-
-
-    
-
-
-
-
-
-    
-
-
-
-
-
-
-    <div id="toTop" class="fa fa-angle-up"></div>
-</aside>
-
-    
-	</div>
-</div>
-
-<footer id="footer">
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2019
-      Powered by <a href="//gohugo.io">Hugo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>.
-    </div>
-  </div>
-</footer>
-
-
-<script src="http://bsydl.github.io/fancybox/jquery.fancybox.pack.js"></script>
-<script src="http://bsydl.github.io/js/script.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
-
-
-<script>hljs.initHighlightingOnLoad();</script>
-
-
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  tex2jax: {
-    inlineMath: [['$','$'], ['\\(','\\)']]}
-  });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-
-
-
-</body>
+  </body>
 </html>
